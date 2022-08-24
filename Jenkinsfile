@@ -16,7 +16,7 @@ pipeline {
         stage('Deploy image') {
           steps{
             script {
-              sh "docker run -p 9000:9000 node-hello:testing"
+              sh "docker run -d -p 9000:9000 node-hello:testing"
             }
           }
         }
